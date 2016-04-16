@@ -11,6 +11,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <name>auction-practice-shared</name>
+
     <artifactId>auction-shared</artifactId>
 
 
