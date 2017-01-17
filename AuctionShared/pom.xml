@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>auction-shared</artifactId>
+    <name>auction-practice-shared</name>
 
 
 </project>

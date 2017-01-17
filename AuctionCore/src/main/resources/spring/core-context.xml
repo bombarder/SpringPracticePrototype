@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="skillsup.practice.spring"/>
+    <context:property-placeholder location="auction.properties"/>
+    <import resource="dao-context.xml"/>
+
+    <!--<bean id="auctionService"-->
+          <!--class ="skillsup.practice.spring.core.impl.AuctionServiceImpl">-->
+          <!--<property name="auctionDaysLast" value="${auction.duration.days}" />-->
+          <!--<property name="lotDao" ref="lotDao"/>-->
+          <!--</bean>-->
+
+    <bean id="gsonBuilder" class="com.google.gson.GsonBuilder"/>
+
+    <bean id="gson" class="com.google.gson.Gson" factory-bean="gsonBuilder"
+        factory-method="create"/>
+
+</beans>
